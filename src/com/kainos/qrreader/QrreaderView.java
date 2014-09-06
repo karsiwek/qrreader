@@ -214,14 +214,15 @@ public class QrreaderView extends View {
         canvas.restore();
 
         mPaint.setColor(NEEDLE_COLOR);
-        drawNeedle(canvas, false);
-        drawNeedle(canvas, true);
+       // drawNeedle(canvas, false);
+      //  drawNeedle(canvas, true);
         
         drawQRText(canvas, null);
     }
 
     private void drawQRText(Canvas canvas, String text){
     	if(text == null){
+    		mPaint.setTextSize(19);
     		canvas.drawText(getContext().getResources().getString(
     				R.string.no_qr_detected), 100, 100, mPaint);
     	}
