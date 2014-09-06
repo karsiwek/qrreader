@@ -47,10 +47,12 @@ public final class R {
          */
         public static final int app_name=0x7f070000;
         public static final int magnetic_interference=0x7f070005;
+        public static final int no_qr_detected=0x7f070008;
         /**  Warning messages. 
          */
         public static final int pitch_too_steep=0x7f070004;
         public static final int place_text_format=0x7f070003;
+        public static final int qr_detected=0x7f070009;
         /**  Menu item strings. 
          */
         public static final int read_aloud=0x7f070006;

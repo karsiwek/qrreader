@@ -17,7 +17,7 @@
 <resources>
 
     <!-- Launch-related strings. -->
-    <string name="app_name">Compass Sample</string>
+    <string name="app_name">QR code detector!</string>
 
     <!-- Strings describing locations. -->
     <string-array name="direction_abbreviations">
@@ -69,5 +69,7 @@
     <!-- Menu item strings. -->
     <string name="read_aloud">Read aloud</string>
     <string name="stop">Stop</string>
-
+    
+	<string name="no_qr_detected">No code detected</string>
+	<string name="qr_detected">QR code: %1$s</string>
 </resources>

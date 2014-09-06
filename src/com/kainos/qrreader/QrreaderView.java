@@ -50,7 +50,7 @@ import java.util.List;
 public class QrreaderView extends View {
 
     /** Various dimensions and other drawing-related constants. */
-    private static final float NEEDLE_WIDTH = 6;
+    private static final float NEEDLE_WIDTH = 20;
     private static final float NEEDLE_HEIGHT = 125;
     private static final int NEEDLE_COLOR = Color.RED;
     private static final float TICK_WIDTH = 2;
@@ -209,15 +209,24 @@ public class QrreaderView extends View {
             drawPlaces(canvas, pixelsPerDegree, i * pixelsPerDegree * 360);
         }
 
-        drawCompassDirections(canvas, pixelsPerDegree);
+       // drawCompassDirections(canvas, pixelsPerDegree);
 
         canvas.restore();
 
         mPaint.setColor(NEEDLE_COLOR);
         drawNeedle(canvas, false);
         drawNeedle(canvas, true);
+        
+        drawQRText(canvas, null);
     }
 
+    private void drawQRText(Canvas canvas, String text){
+    	if(text == null){
+    		canvas.drawText(getContext().getResources().getString(
+    				R.string.no_qr_detected), 100, 100, mPaint);
+    	}
+    }
+    
     /**
      * Draws the compass direction strings (N, NW, W, etc.).
      *
